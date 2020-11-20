@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>New CRM Entry</title>
+</head>
+<body>
+  <h1>Create New CRM Entry</h1>
+  <form action='/crm/<%= client._id %>?_method=PUT' method='POST'>
+    <label for='first'>First</label>
+    <input name='first' type='text' value='<%= client.first %>'/>
+
+    <label for='last'>Last</label>
+    <textarea name='last'/><%= client.last %></textarea>
+
+    <label for='phone'>Phone</label>
+    <textarea name='phone'/><%= client.phone %></textarea>
+
+    <label for='linkedIn'>LinkedIn</label>
+    <textarea name='linkedin'/><%= client.linkedIn %></textarea>
+
+    <label for='notes'>Notes</label>
+    <textarea name='notes'/><%= client.notes %></textarea> 
+
+
+    <input type='submit' />
+
+    <a href='/crm/<%= client._id %>'>Cancel</a>
+  </form>
+</body>
+</html>
